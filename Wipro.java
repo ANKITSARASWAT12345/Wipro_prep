@@ -147,20 +147,142 @@
 
 //second largest
 
-class Wipro{
+/*class Wipro{
     public static void main(String[] args) {
-        int arr[]={1,6,3,88,44,66,22};
+        int arr[]={1,6,3,88,44,665,22};
         int n=arr.length;
-        int max=arr[0];
-        int second_max=0;
+        int max=0;
+        int second_max=-1;
         for(int i=0;i<n;i++){
-            if(arr[i]>max){
-                
+              if(arr[i]>max){
                 second_max=max;
                 max=arr[i];
-            }
-            
+              }
+              else if(arr[i]!=max &&arr[i]>second_max){
+                second_max=arr[i];
+              }
         }
         System.out.println(second_max);
+       
+    }
+}*/
+
+
+//reverse an array
+
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr[]={1,2,3,400,55};
+        int n=arr.length;
+        int low=0;
+        int high=n-1;
+        while(low<high){
+            int temp=arr[high];
+            arr[high]=arr[low];
+            arr[low]=temp;
+            low++;
+            high--;
+        }
+
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}*/
+
+
+
+//remove dupliactes from a sorted array
+
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr[]={1,3,3,4,5,5,6};
+
+        int res=1;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]!=arr[i-1]){
+               arr[res++]=arr[i];
+            }
+        }
+
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}*/
+
+
+//remove duplicates form an unsorted array
+
+import java.util.HashMap;
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr[]={1,7,4,1,7,6,4,7,8};
+        int n=arr.length;
+        HashMap<Integer,Integer>mpp=new HashMap<>();
+        for(int i=0;i<n;i++){
+            if(!mpp.containsKey(arr[i])){
+                System.out.print(arr[i]+" ");
+                mpp.put(arr[i],1);
+            }
+        }
+    }
+}*/
+
+//rotate an array by d palaces
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr[]={1, 2, 3, 4, 5};
+        int n=arr.length;
+        int d=2;
+        rotate_by_d_places(arr,n,d);
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    static void rotate_by_d_places(int arr[],int n,int d){
+        reverse(arr,0,d-1);
+        reverse(arr,d,n-1);
+        reverse(arr,0,n-1);
+    }
+    static void reverse(int arr[],int low,int high){
+
+        while(low<high){
+            int temp=arr[high];
+            arr[high]=arr[low];
+            arr[low]=temp;
+            low++;
+            high--;
+        }
+
+    }
+}*/
+
+
+//move zeroes to the end of the array
+
+class Wipro{
+    public static void main(String[] args) {
+        int arr[]={10,8,0,0,12,0,6};
+        int n=arr.length;
+
+        int count=0;
+       for(int i=0;i<n;i++){
+        if(arr[i]!=0){
+            arr[count++]=arr[i];
+        }
+       }
+
+       while(count<n){
+        arr[count++]=0;
+       }
+
+       for(int i=0;i<n;i++){
+        System.out.print(arr[i]+" ");
+       }
     }
 }
