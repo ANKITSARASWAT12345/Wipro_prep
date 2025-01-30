@@ -265,7 +265,7 @@ import java.util.HashMap;
 
 //move zeroes to the end of the array
 
-class Wipro{
+/*class Wipro{
     public static void main(String[] args) {
         int arr[]={10,8,0,0,12,0,6};
         int n=arr.length;
@@ -284,5 +284,122 @@ class Wipro{
        for(int i=0;i<n;i++){
         System.out.print(arr[i]+" ");
        }
+    }
+}*/
+
+
+//find the nearest gerater element in the given array
+
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr[]={4,5,2,10,8};
+        int n=arr.length;
+       int result=-1;
+        for(int i=0;i<n;i++){
+            result=-1;
+            for(int j=i+1;j<n;j++){
+                if(arr[j]>arr[i]){
+                    result=arr[j];
+                    break;
+                   
+                }
+            
+                
+            }
+            System.out.print(result+" ");
+        }
+
+       
+
+    }
+}*/
+
+
+//to check if the given matrices are identical or not
+
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr1[][]={{1,2,3},{4,5,6},{7,8,9}};
+        int arr2[][]={{1,2,3},{4,54,6},{7,8,9}};
+        boolean result=true;
+
+        for(int i=0;i<arr1.length;i++){
+            for(int j=0;j<arr2.length;j++){
+                if(arr1[i][j]!=arr2[i][j]){
+                    result=false;
+                }
+            }
+        }
+        System.out.println(result);
+    }
+}*/
+
+
+//print the matrix in snake pattern
+
+
+/*class Wipro{
+    public static void main(String[] args) {
+        int arr1[][]={{1,2,3},{4,5,6},{7,8,9}};
+        int n=arr1.length;
+        int row=3;
+        int col=3;
+        for(int i=0;i<row;i++){
+            if(i%2==0){
+                for(int j=0;j<col;j++){
+
+                    System.out.print(arr1[i][j]+" ");
+
+                }
+            }
+            else {
+                for(int j=col-1;j>=0;j--){
+                    System.out.print(arr1[i][j]+" ");
+                }
+            }
+        }
+    }
+}*/
+
+
+
+//reverse a string
+
+/*class Wipro{
+    public static void main(String[] args) {
+        String str="ankit";
+        String reveString="";
+        for(int i=0;i<str.length();i++){
+            reveString=str.charAt(i)+reveString;
+        }
+        System.out.println(reveString);
+    }
+}*/
+
+
+//find the index of occurance of given pattern in the given text
+
+
+class Wipro{
+    public static void main(String[] args) {
+        String txt = "AABAACAADAABAAABAA";
+        String pat = "AABA";
+
+        int n=txt.length();
+        int m=pat.length();
+        for(int i=0;i<=n-m;i++){
+            int j;
+            for(j=0;j<m;j++){
+                if(txt.charAt(i+j)!=pat.charAt(j)){
+                    break;
+                }
+
+            }
+            if(j==m){
+                System.out.println("pattern found at index : "+i);
+            }
+        }
     }
 }
