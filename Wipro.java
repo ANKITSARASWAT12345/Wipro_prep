@@ -382,7 +382,7 @@ import java.util.HashMap;
 //find the index of occurance of given pattern in the given text
 
 
-class Wipro{
+/*class Wipro{
     public static void main(String[] args) {
         String txt = "AABAACAADAABAAABAA";
         String pat = "AABA";
@@ -400,6 +400,38 @@ class Wipro{
             if(j==m){
                 System.out.println("pattern found at index : "+i);
             }
+        }
+    }
+}*/
+
+
+//find a number is armstrong or not
+
+class Wipro{
+    public static void main(String[] args) {
+        int n=1513;
+        int temp=n;
+        int digits=0;
+        while(temp>0){
+            temp/=10;
+            digits++;
+
+
+        }
+        temp=n;
+        int arm_sum=0;
+        int last=0;
+        while(temp>0){
+        last=temp%10;
+           arm_sum+=Math.pow(last,digits);
+           temp=temp/10;
+        }
+
+        if(arm_sum==n){
+            System.out.println("yess!!");
+        }
+        else{
+            System.out.println("no!!!");
         }
     }
 }
