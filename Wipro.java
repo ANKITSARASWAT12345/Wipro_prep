@@ -407,7 +407,7 @@ import java.util.HashMap;
 
 //find a number is armstrong or not
 
-class Wipro{
+/*class Wipro{
     public static void main(String[] args) {
         int n=1513;
         int temp=n;
@@ -433,5 +433,27 @@ class Wipro{
         else{
             System.out.println("no!!!");
         }
+    }
+}*/
+
+
+
+class Wipro{
+    public static void main(String[] args) {
+      
+        String s = "Geeks"; 
+        String r = "";
+        char ch;
+
+        for (int i = 0; i < s.length(); i++) {
+              
+        
+            ch = s.charAt(i);
+          
+            
+            r = ch + r; 
+        }
+      
+        System.out.println(r);
     }
 }
